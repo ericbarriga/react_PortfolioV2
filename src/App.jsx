@@ -4,6 +4,7 @@ import Intro from "./componants/intro/intro"
 import Portfolio from "./componants/portfolio/portfolio"
 import Testimonials from "./componants/testimonials/testimonials"
 import Works from "./componants/works/works"
+import "./app.scss"
 
 function App() {
   return (
