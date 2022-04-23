@@ -10,7 +10,7 @@ export default function Intro() {
         init(textRef.current, {
             showCursor: false,
             backDelay: 1500,
-            strings: ["react", "graphql", "mongodb", "javacript", "html", "css", "sql",]
+            strings: ["react", "graphql", "mongodb", "javascript", "html", "css", "sql",]
         })
     }, [])
     return (

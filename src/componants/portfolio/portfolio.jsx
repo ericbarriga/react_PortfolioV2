@@ -1,34 +1,53 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/portfolioList";
+import {
+    EPortfolio,
+    BookSearch,
+    weatherApp
+} from "../../data"
 
 export default function Portfolio() {
     const [selected, setSelected] = useState("featured")
+    const [data, setData] = useState([])
     const list = [
         {
             id: "featured",
-            title: "Featured",
+            title: "Ecommerce",
         },
         {
-            id: "web",
-            title: "Web App",
+            id: "book",
+            title: "Book Search",
         },
         {
-            id: "mobile",
-            title: "mobile app",
+            id: "weather",
+            title: "Weather App",
         },
-        {
-            id: "design",
-            title: "design content",
-        },
-        {
-            id: "content",
-            title: "content",
-        },
-    ]
+
+
+    ];
+
+    useEffect(() => {
+        switch (selected) {
+            case "featured":
+                setData(EPortfolio)
+                break;
+            case "book":
+                setData(BookSearch)
+                break;
+            case "weather":
+                setData(weatherApp)
+                break;
+            default:
+                setData(EPortfolio)
+        }
+
+    }, [selected])
+
+    // 
     return (
         <div className="portfolio" id="portfolio">
-            <h1>portfolio</h1>
+            <h1>Portfolio</h1>
             <ul>
                 {list.map(item => (
                     <PortfolioList title={item.title}
@@ -40,26 +59,12 @@ export default function Portfolio() {
                 ))}
             </ul>
             <div className="container">
-                <div className="item">
-                    <img src="assets/me.jpeg" alt="" width="200" height="200" />
-                    <h3>ecommerce</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/me.jpeg" alt="" width="200" height="200" />
-                    <h3>ecommerce</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/me.jpeg" alt="" width="200" height="200" />
-                    <h3>ecommerce</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/me.jpeg" alt="" width="200" height="200" />
-                    <h3>ecommerce</h3>
-                </div>
-                <div className="item">
-                    <img src="assets/me.jpeg" alt="" width="200" height="200" />
-                    <h3>ecommerce</h3>
-                </div>
+                {data.map(d => (
+                    <div className="item">
+                        <img src={d.img} />
+                        <h3>{d.title}</h3>
+                    </div>
+                ))}
             </div>
         </div>
     )
