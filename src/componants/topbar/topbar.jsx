@@ -15,7 +15,8 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     {/*  */}
                     <div className="itemContainer">
                         <Email className="icon" />
-                        <span>ericbarriga007@gmail.com</span>
+                        {/* <span>ericbarriga007@gmail.com</span> */}
+                        <a href="mailto:ericbarriga007@gmail.com?body=we would love to hire you">ericbarriga007@gmail.com</a>
                     </div>
                 </div>
                 <div className="right">
