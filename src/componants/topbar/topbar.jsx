@@ -10,7 +10,8 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     <a href="#intro" className="logo" >BARRIGA.</a>
                     <div className="itemContainer">
                         <LocalPhone className="icon" />
-                        <span>303 549 3545</span>
+                        {/* <span>303 549 3545</span> */}
+                        <a href="https://github.com/ericbarriga"> Github</a>
                     </div>
                     {/*  */}
                     <div className="itemContainer">

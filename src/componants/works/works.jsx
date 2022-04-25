@@ -11,22 +11,22 @@ export default function Works() {
         {
             id: "1",
             icon: "assets/arrow2.png",
-            title: "graphql",
-            desc: "a query language",
+            title: "About Me",
+            desc: "i am 30 years old with a new love for coding and web development",
             img: "assets/IMG_1612.JPG",
         },
         {
             id: "2",
             icon: "assets/arrow2.png",
-            title: "mongodb",
-            desc: "database ",
+            title: "Back end ",
+            desc: "Thru hard work in the boot camp i have learned mongodb with sql. I have also leased how to use and implement atlas db and graphQL  ",
             img: "assets/IMG_1612.JPG",
         },
         {
             id: "3",
             icon: "assets/arrow2.png",
-            title: "react",
-            desc: "happy hacking",
+            title: "Front End ",
+            desc: "For front end i have learned the basics with now also learning react and using many libraries bootstrap,sass,css,bulma,. I look forward to learning more and putting my skills to the test ",
             img: "assets/IMG_1612.JPG",
         },
     ];
@@ -54,7 +54,7 @@ export default function Works() {
                                     <p>
                                         {d.desc}
                                     </p>
-                                    <span>projects</span>
+                                    {/* <span>projects</span> */}
                                 </div>
                             </div>
                             <div className="right">
